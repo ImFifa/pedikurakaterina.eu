@@ -1,0 +1,37 @@
+{block content}
+
+<section class="homepage" id="homepage">
+    <div class="container">
+        <h1>Vítejte na stránkách Pedikúry Kateřina!</h1>
+        {box about}
+
+        <div class="login-form">
+            <h3>Vstup pro klienty</h3>
+            {form signForm, class => 'text-left'}
+                <div n:if="$form->hasErrors()" n:foreach="$form->getErrors() as $error" class="alert alert-danger">
+                    <div class="icon">
+                        <i class="mdi mdi-alert-circle"></i>
+                    </div>
+                    <div class="message">
+                        {$error}
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <div class="form-group">
+                        {label email}{/label}
+                        {input email class => 'form-control'}
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <div class="form-group">
+                        {label password}{/label}
+                        {input password class => 'form-control'}
+                    </div>
+                </div>
+                <div class="form-group my-2">
+                    <button n:name="login" class="btn btn-primary btn-block">Přihlásit se</button>
+                </div>
+            {/form}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,63 @@
+{block content}
+<header>
+    <h1 n:block=title>Kontakt</h1>
+</header>
+
+<section class="contact" id="contact">
+    <div class="container">
+
+        <div class="row contact-row">
+            <div class="col-lg-4">{box name}</div>
+            <div class="col-lg-4">{box address}</div>
+            <div class="col-lg-4">{box phone}</div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Napište mi!</h3>
+            {form contactForm, class => 'text-left'}
+                <div n:if="$form->hasErrors()" n:foreach="$form->getErrors() as $error" class="alert alert-danger">
+                    <div class="icon">
+                        <i class="mdi mdi-alert-circle"></i>
+                    </div>
+                    <div class="message">
+                        {$error}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group mt-2">
+                            <div class="form-group">
+                                {label name}{/label}
+                                {input name class => 'form-control'}
+                            </div>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="form-group">
+                                {label email}{/label}
+                                {input email class => 'form-control'}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group mt-2">
+                            <div class="form-group">
+                                {label content}{/label}
+                                {input content class => 'form-control'}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group my-2">
+                    <button n:name="send" class="btn btn-primary btn-block">Přihlásit se</button>
+                </div>
+            {/form}
+        </div>
+
+        <div class="map">
+            <h3>Kde mě najdete</h3>
+            <iframe title="Kde mě najdete" id="google-map" src="" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d636.7721748124915!2d13.545825788187049!3d50.327596398709865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470a3d4599c754d3%3A0x68c9ac4fc993698d!2zUGVkaWvDunJhIEthdGXFmWluYQ!5e0!3m2!1scs!2scz!4v1598520839288!5m2!1scs!2scz" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+    </div>
+</section>
+

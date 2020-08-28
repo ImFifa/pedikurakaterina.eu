@@ -1,0 +1,13 @@
+.idea
+vendor
+/modules
+node_modules
+composer.lock
+temp/*
+log/*
+app/config/config.local.neon
+app/config/config.local.php
+www/upload/*
+www/assets/*
+www/dist/*
+.DS_Store

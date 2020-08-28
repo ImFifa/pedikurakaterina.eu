@@ -1,0 +1,7 @@
+parameters: 
+	modules:
+		- Core
+		- Admin
+		- Box
+		- Gallery
+		- News

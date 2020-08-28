@@ -1,0 +1,37 @@
+{
+  "name": "filipurban.cz/lukrastav.cz",
+  "description": "Lukrastav.cz",
+  "type": "project",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    { "type": "vcs", "url": "git@bitbucket.org:team_simple/composer-installer.git" },
+    { "type": "vcs", "url": "git@bitbucket.org:team_simple/coremodule.git" },
+    { "type": "vcs", "url": "git@bitbucket.org:team_simple/adminmodule.git" },
+    { "type": "vcs", "url": "git@bitbucket.org:team_simple/boxmodule.git" },
+    { "type": "vcs", "url": "git@bitbucket.org:team_simple/gallerymodule.git" },
+    { "type": "vcs", "url": "git@bitbucket.org:team_simple/newsmodule.git" }
+  ],
+  "autoload": {
+    "classmap": ["app/Bootstrap.php"]
+  },
+  "require": {
+    "php": ">= 7.2",
+    "nette/nette": "^3.0.0",
+    "tracy/tracy": "^2.7",
+    "uestla/twigrid": "^12.0.0",
+    "simple-libs/composer-installer": "@dev",
+    "simple-cms/core-module": "dev-master",
+    "simple-cms/admin-module": "dev-master",
+    "simple-cms/box-module": "dev-master",
+    "simple-cms/gallery-module": "dev-master",
+    "simple-cms/news-module": "dev-master",
+    "ext-json": "*"
+  },
+  "config": {
+    "platform": {
+      "php": "v7.2.18"
+    }
+  }
+}
