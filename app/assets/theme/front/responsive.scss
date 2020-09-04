@@ -1,0 +1,29 @@
+@include media-breakpoint-up(md) {
+  .homepage {
+
+    h1, p {
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 3rem;
+    }
+
+    .login-form {
+      padding: 2rem;
+      margin: 0 auto;
+
+      h3 {
+        text-align: center;
+        font-size: 1.8rem;
+      }
+    }
+
+  }
+  .contact-form {
+    padding: 2rem;
+  }
+  .submit-btn {
+    text-align: center;
+  }
+}

@@ -1,0 +1,56 @@
+{block #title}
+    {$event === null ? 'Přidat událost' : ('Upravit ' . $event['name'] )}
+{/block}
+
+{block #buttons}
+    <a href="#" class="btn btn-primary" onclick="triggerClick('.btn-save')">Uložit</a>
+    <a n:href="default" class="btn btn-light"><i class="fa fa-arrow-left"></i> Zpět</a>
+{/block}
+
+{block #content}
+
+    <div class="container-fluid bg-white">
+        <div class="row">
+            <div class="col-lg-12">
+                {snippet cover}
+                    {form eventForm}
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    {label name}{/label}
+                                    {input name class => 'form-control'}
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    {label date_from}{/label}
+                                    {input date_from class => 'form-control form-date'}
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    {label date_to}{/label}
+                                    {input date_to class => 'form-control form-date'}
+                                    <small>Pouze pokud se jedná o vícedenní akci</small>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    {label link}{/label}
+                                    {input link class => 'form-control'}
+                                    <small>Nepovinné pole</small>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="form-group col-lg-4">
+                                {input save class => 'btn btn-primary btn-save'}
+                            </div>
+                        </div>
+                    {/form}
+                {/snippet}
+            </div>
+        </div>
+    </div>
+{/block}

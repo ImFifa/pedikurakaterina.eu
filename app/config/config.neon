@@ -11,9 +11,13 @@ session:
 	expiration: 14 days
 
 services:
+	repository: App\Service\ProjectModelRepository
 	router: App\RouterFactory::createRouter
 
 parameters:
+	admin:
+		menu:
+			Kalendář: [':Admin:Calendar:', calendar-check]
 	customTemplatesDir: %appDir%/templates/
 
 migrations:

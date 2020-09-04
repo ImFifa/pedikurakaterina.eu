@@ -2,7 +2,7 @@
 
 	{var $isHomepage = $presenter->getAction(true) === ':Project:Homepage:default'}
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
 		<a class="navbar-brand" n:href="Homepage:default">Pedikúra Kateřina</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -30,8 +30,15 @@
 {/block}
 
 {block #head}
-
-	<!-- TODO ICON -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{$basePath}/dist/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{$basePath}/dist/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{$basePath}/dist/favicon/favicon-16x16.png">
+	<link rel="manifest" href="{$basePath}/dist/favicon/site.webmanifest">
+	<link rel="mask-icon" href="{$basePath}/dist/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="{$basePath}/dist/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="{$basePath}/dist/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 
 	<link rel="stylesheet" href="{$basePath}/dist/front.bundle.css?{filemtime(WWW . '/dist/front.bundle.css')}" type="text/css">
 {/block}

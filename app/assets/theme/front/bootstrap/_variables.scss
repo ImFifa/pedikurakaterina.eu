@@ -4,13 +4,8 @@
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Color system
-$font-white: #C7C7C7 !default;
-$background-dark: #151515 !default;
-$dark: #242424 !default;
-$gray: #5B5B5B !default;
 
 $white:    #fff !default;
-$whiteDDD:    #ddd !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -21,8 +16,6 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
-$black111:    #111 !default;
-$black222:    #222 !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -45,7 +38,7 @@ $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #DB371D !default;
+$red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
@@ -73,8 +66,8 @@ $colors: map-merge(
                 $colors
 );
 
-$primary:       $red !default;
-$secondary:     #C3444B !default;
+$primary:       #B7A824 !default;
+$secondary:     #776B00 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -113,8 +106,6 @@ $escaped-characters: (
                 ("<","%3c"),
                 (">","%3e"),
                 ("#","%23"),
-                ("(","%28"),
-                (")","%29"),
 ) !default;
 
 
@@ -209,9 +200,7 @@ $grid-breakpoints: (
         sm: 576px,
         md: 768px,
         lg: 992px,
-        xl: 1200px,
-        xxl: 1400px,
-        xxxl: 1600px
+        xl: 1200px
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -226,9 +215,7 @@ $container-max-widths: (
         sm: 540px,
         md: 720px,
         lg: 960px,
-        xl: 1140px,
-        xxl: 1280px,
-        xxxl: 1480px
+        xl: 1140px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -250,7 +237,7 @@ $grid-row-columns:            6 !default;
 $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
 
-$border-width:                2px !default;
+$border-width:                1px !default;
 $border-color:                $gray-300 !default;
 
 $border-radius:               .25rem !default;
@@ -400,8 +387,8 @@ $table-border-level:          -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .8rem !default;
-$input-btn-padding-x:         1.6rem !default;
+$input-btn-padding-y:         .5rem !default;
+$input-btn-padding-x:         1rem !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
@@ -410,13 +397,13 @@ $input-btn-focus-width:       .2rem !default;
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm:      .8rem !default;
-$input-btn-padding-x-sm:      1.6rem !default;
+$input-btn-padding-y-sm:      .25rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 $input-btn-line-height-sm:    $line-height-sm !default;
 
-$input-btn-padding-y-lg:      .8rem !default;
-$input-btn-padding-x-lg:      1.6rem !default;
+$input-btn-padding-y-lg:      .5rem !default;
+$input-btn-padding-x-lg:      1rem !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 $input-btn-line-height-lg:    $line-height-lg !default;
 
@@ -428,7 +415,7 @@ $input-btn-border-width:      $border-width !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 $btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
+$btn-padding-x:               3rem !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
 $btn-line-height:             $input-btn-line-height !default;
@@ -446,7 +433,7 @@ $btn-line-height-lg:          $input-btn-line-height-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-bold !default;
+$btn-font-weight:             $font-weight-normal !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
@@ -458,7 +445,7 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           50px !default;
+$btn-border-radius:           0 !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
@@ -494,7 +481,7 @@ $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
 
-$input-border-radius:                   $border-radius !default;
+$input-border-radius:                   0 !default;
 $input-border-radius-lg:                $border-radius-lg !default;
 $input-border-radius-sm:                $border-radius-sm !default;
 
@@ -710,8 +697,8 @@ $zindex-tooltip:                    1070 !default;
 
 // Navs
 
-$nav-link-padding-y:                1rem !default;
-$nav-link-padding-x:                2rem !default;
+$nav-link-padding-y:                .5rem !default;
+$nav-link-padding-x:                1rem !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
@@ -735,7 +722,7 @@ $nav-divider-margin-y:              $spacer / 2 !default;
 $navbar-padding-y:                  $spacer / 2 !default;
 $navbar-padding-x:                  $spacer !default;
 
-$navbar-nav-link-padding-x:         1rem !default;
+$navbar-nav-link-padding-x:         .5rem !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -799,7 +786,7 @@ $dropdown-item-padding-y:           .25rem !default;
 $dropdown-item-padding-x:           1.5rem !default;
 
 $dropdown-header-color:             $gray-600 !default;
-$dropdown-header-padding:           .5rem !default;
+
 
 // Pagination
 
@@ -1149,7 +1136,6 @@ $displays: none, inline, inline-block, block, table, table-row, table-cell, flex
 $overflows: auto, hidden !default;
 $positions: static, relative, absolute, fixed, sticky !default;
 $user-selects: all, auto, none !default;
-
 
 // Printing
 

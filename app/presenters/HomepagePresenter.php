@@ -29,10 +29,11 @@ final class HomepagePresenter extends BasePresenter
 
 
         $form->addText('email', 'Emailová adresa')
-            ->setHtmlAttribute('placeholder', 'Zadejte Vaši emailovou adresu')
+            ->setHtmlAttribute('placeholder', 'Vaše emailová adresa')
             ->setRequired('Bez zadání Vaší emailové adresy se nemůžete přihlásit.');
 
         $form->addPassword('password', 'Heslo')
+            ->setHtmlAttribute('placeholder', '******')
             ->setRequired('Heslo je povinné');
 
         $form->addSubmit('login', 'Přihlásit se');
