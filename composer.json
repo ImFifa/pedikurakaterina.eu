@@ -9,9 +9,7 @@
     { "type": "vcs", "url": "git@bitbucket.org:team_simple/composer-installer.git" },
     { "type": "vcs", "url": "git@bitbucket.org:team_simple/coremodule.git" },
     { "type": "vcs", "url": "git@bitbucket.org:team_simple/adminmodule.git" },
-    { "type": "vcs", "url": "git@bitbucket.org:team_simple/boxmodule.git" },
-    { "type": "vcs", "url": "git@bitbucket.org:team_simple/gallerymodule.git" },
-    { "type": "vcs", "url": "git@bitbucket.org:team_simple/newsmodule.git" }
+    { "type": "vcs", "url": "git@bitbucket.org:team_simple/boxmodule.git" }
   ],
   "autoload": {
     "classmap": ["app/Bootstrap.php"]
@@ -25,9 +23,8 @@
     "simple-cms/core-module": "dev-master",
     "simple-cms/admin-module": "dev-master",
     "simple-cms/box-module": "dev-master",
-    "simple-cms/gallery-module": "dev-master",
-    "simple-cms/news-module": "dev-master",
-    "ext-json": "*"
+    "ext-json": "*",
+    "contributte/recaptcha": "^3.3"
   },
   "config": {
     "platform": {

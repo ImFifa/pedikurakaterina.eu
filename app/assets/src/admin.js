@@ -1,3 +1,6 @@
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+
 $(document).ready(function() {
 	var calendar = $('#calendar').fullCalendar({
 		editable:true,

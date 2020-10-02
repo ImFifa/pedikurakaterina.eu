@@ -36,6 +36,9 @@ final class HomepagePresenter extends BasePresenter
             ->setHtmlAttribute('placeholder', '******')
             ->setRequired('Heslo je povinné');
 
+        $form->addInvisibleReCaptcha('recaptcha')
+            ->setMessage('Jste opravdu člověk?');
+
         $form->addSubmit('login', 'Přihlásit se');
 
         $form->onSubmit[] = function (Form $form) {
@@ -64,6 +67,10 @@ final class HomepagePresenter extends BasePresenter
             ->setRequired('Toto pole je povinné.');
 
         $form->addTextArea('content', 'Text zprávy:', 80, 5);
+
+        $form->addInvisibleReCaptcha('recaptcha')
+            ->setMessage('Jste opravdu člověk?');
+
 
         $form->addSubmit('send', 'Odeslat zprávu');
 
